@@ -10,7 +10,7 @@
                      </div>
                      <div class="tp-footer-widget__list">
                         <ul>
-                           <li><a title="go here" href="index.html">Landing Page</a></li>
+                           <li><a title="go here" href="index.php">Landing Page</a></li>
                            <li><a title="go here" href="#">Popup Builder</a></li>
                            <li><a title="go here" href="#">Web-design</a></li>
                            <li><a title="go here" href="#">Content</a></li>
@@ -58,7 +58,7 @@
                      </div>
                      <div class="tp-footer-widget__list">
                         <ul>
-                           <li><a title="go here" href="index.html">Landing Page</a></li>
+                           <li><a title="go here" href="index.php">Landing Page</a></li>
                            <li><a title="go here" href="#">Popup Builder</a></li>
                            <li><a title="go here" href="#">Web-design</a></li>
                            <li><a title="go here" href="#">Content</a></li>

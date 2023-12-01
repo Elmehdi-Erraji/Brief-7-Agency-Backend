@@ -34,12 +34,14 @@
 
    <main>
     <!-- breadcrumb area start -->
-    <section class="breadcrumb__area breadcrumb-height include-bg p-relative" data-background="../assets/img/breadcrumb/breadcurmb.jpg">
-        <div class="container">
+    
+    <section class="breadcrumb__area grey-bg  breadcrumb-height include-bg p-relative" style="height: 400px;">
+    
+        <div class="container" style="margin-bottom: 500px;">
            <div class="row">
               <div class="col-xxl-12">
                  <div class="breadcrumb__content">
-                    <h3 class="breadcrumb__title wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s">Sixart Service </h3>
+                    <h3 class="breadcrumb__title wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s">YourInterface Service </h3>
                     <div class="breadcrumb__list wow tpfadeUp" data-wow-duration=".9s">
                        <span><a href="#">Home</a></span>
                        <span class="dvdr"><i class="fa fa-angle-right"></i></span>
@@ -63,7 +65,7 @@
                        </div>
                        <div class="service-item-three__content">
                           <h4 class="tp-service-sm-title"><a href="service-details.html">Web <br> Development</a></h4>
-                          <p>Sixart have got quite a few already made templates for better project management that you can
+                          <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
@@ -85,7 +87,7 @@
                        </div>
                        <div class="service-item-three__content">
                           <h4 class="tp-service-sm-title"><a href="service-details.html">Mobile <br> Development</a></h4>
-                          <p>Sixart have got quite a few already made templates for better project management that you can
+                          <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
@@ -107,7 +109,7 @@
                        </div>
                        <div class="service-item-three__content">
                           <h4 class="tp-service-sm-title"><a href="service-details.html">Web Custom <br> Solution</a></h4>
-                          <p>Sixart have got quite a few already made templates for better project management that you can
+                          <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
@@ -129,7 +131,7 @@
                        </div>
                        <div class="service-item-three__content">
                           <h4 class="tp-service-sm-title"><a href="service-details.html">User Experience <br> Design</a></h4>
-                          <p>Sixart have got quite a few already made templates for better project management that you can
+                          <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
@@ -151,7 +153,7 @@
                        </div>
                        <div class="service-item-three__content">
                           <h4 class="tp-service-sm-title"><a href="service-details.html">User Interface <br> Design</a></h4>
-                          <p>Sixart have got quite a few already made templates for better project management that you can
+                          <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
@@ -173,7 +175,7 @@
                        </div>
                        <div class="service-item-three__content">
                           <h4 class="tp-service-sm-title"><a href="service-details.html">Ui Kit and 3d <br> Desgin</a></h4>
-                          <p>Sixart have got quite a few already made templates for better project management that you can
+                          <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
