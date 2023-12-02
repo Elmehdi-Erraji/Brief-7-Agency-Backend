@@ -27,11 +27,13 @@
               
             </ul>
 
-            <ul class="navbar-nav ml-auto" >
+            <ul class="navbar-nav ml-auto" >           
               <li class="">
-                <a class=" btn" href="view/">Register</a>
+                <a class=" btn" href="register.php">Register</a>
+                <a class=" btn" href="LogIn.php">Log In</a>
               </li>
             </ul>
+           
           </div>
         </div>
       </nav>
