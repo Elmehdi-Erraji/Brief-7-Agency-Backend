@@ -105,6 +105,7 @@
 
    <!-- JS here -->
    <script src="../assets/js/jquery.js"></script>
+   <script src="../assets/js/form-validation.js"></script>
    <script src="../assets/js/bootstrap.bundle.min.js"></script> 
    <script src="../assets/js/wow.js"></script>
    <script src="../assets/js/imagesloaded-pkgd.js"></script>

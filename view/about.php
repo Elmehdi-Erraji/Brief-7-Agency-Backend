@@ -40,7 +40,7 @@
                <div class="col-xxl-12">
                   <div class="breadcrumb__content">
                      <h3 class="breadcrumb__title wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s">About
-                        Sixart</h3>
+                        YourInterface</h3>
                      <div class="breadcrumb__list wow tpfadeUp" data-wow-duration=".9s">
                         <span><a href="#">Home</a></span>
                         <span class="dvdr"><i class="fa fa-angle-right"></i></span>
@@ -59,7 +59,7 @@
             <div class="row">
                <div class="col-xl-5 col-lg-6 wow tpfadeLeft" data-wow-duration=".7s" data-wow-delay=".5s">
                   <div class="ab-inner-content">
-                     <h4 class="ab-title-xs mb-25">Sixart do Design, Code, <br> Develop and Branding</h4>
+                     <h4 class="ab-title-xs mb-25">YourInterface do Design, Code, <br> Develop and Branding</h4>
                      <p>Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo claritatem insitamconse
                         quat.Exerci tation ullamcorper suscipit loborti excommodo habent claritatem insitamconse
                         quat.Exerci tationlobortis nisl aliquip ex ea commodo habent claritatem </p>

@@ -38,10 +38,5 @@ $(window).on('load', function () {
 	$('body').delay(350).css({ 'overflow': 'visible' });
 
 })
-	
-
-	
-
-
 
 })(jQuery);

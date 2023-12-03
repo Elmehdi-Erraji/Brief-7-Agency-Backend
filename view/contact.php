@@ -84,13 +84,23 @@
                           </h4>
                        </div>
                        <div class="tpcontact__form">
-                          <form action="#">
-                             <input type="text" placeholder="Your name">
-                             <input type="text" placeholder="Phone number">
-                             <input type="email" placeholder="Enter your mail">
-                             <textarea placeholder="Enter your message"></textarea>
-                          </form>
-                          <button class="tp-btn">Let,s Talk</button>
+                       <form id="contactForm">
+                            <input type="text" id="name" placeholder="Your name">
+                            <span id="nameError" class="error"></span>
+
+                            <input type="text" id="phoneNumber" placeholder="Phone number">
+                            <span id="phoneError" class="error"></span>
+
+                            <input type="email" id="email" placeholder="Enter your mail">
+                            <span id="emailError" class="error"></span>
+
+                            <textarea id="message" placeholder="Enter your message"></textarea>
+                            <span id="messageError" class="error"></span>
+
+                            <button type="button" onclick="validateForm_contact()" class="tp-btn">Let's Talk</button>
+                            <br><br>
+                        </form>
+                         
                        </div>
                     </div>
                  </div>
@@ -100,11 +110,12 @@
      </div>
      <!-- tp-contact-area-end -->
    </main>
-
+   
 <?php include 'includes/footer.php' ?>
 
    <!-- JS here -->
    <script src="../assets/js/jquery.js"></script>
+   <script src="../assets/js/form-validation.js"></script>
    <script src="../assets/js/bootstrap.bundle.min.js"></script> 
    <script src="../assets/js/wow.js"></script>
    <script src="../assets/js/imagesloaded-pkgd.js"></script>
