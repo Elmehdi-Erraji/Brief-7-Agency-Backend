@@ -21,7 +21,7 @@ create table permission_role(
 
 
 create table User (
-    id PRIMARY key AUTO_INCREMENT,
+    id int PRIMARY key AUTO_INCREMENT,
     username varchar(100),
     email varchar(100),
     PASSWORD varchar(150),
@@ -46,7 +46,7 @@ create table order(
 );
 
 create table developer (
-    id primary key ,
+    id int primary key ,
     expertise varchar(100),
     status int ,
     user_id int,
