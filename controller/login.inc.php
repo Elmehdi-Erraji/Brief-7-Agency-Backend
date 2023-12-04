@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
                 
 
                  // Redirect all users to a single dashboard
-                 header("Location: dashboard.php");
+                 header("Location: ../view/dashboard.php");
                  exit();
              
             } else {
