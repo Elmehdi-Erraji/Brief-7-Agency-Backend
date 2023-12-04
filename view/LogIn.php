@@ -69,7 +69,7 @@
                                         <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
                                     </div>
                                     <br>
-                                    <button class="tp-btn" type="button" onclick="login()">Login</button>
+                                    <button class="tp-btn" type="submit" onclick="login()">Login</button>
                                 </form>
                                 <br>
                                 <p id="txt">If you don't have an account, <a href="register.php">sign up here</a>.</p>
@@ -90,7 +90,7 @@
                                     </div>
                                     <br>
                                     <div class="button-group">
-                                    <button class="tp-btn" type="button" onclick="sendResetLink()">Reset Password</button>
+                                    <button class="tp-btn" type="submit" onclick="sendResetLink()">Reset Password</button>
                                     <button class="tp-btn" type="button" onclick="goToLoginForm()">Go Back</button>
                                 </div>
                             </form>
