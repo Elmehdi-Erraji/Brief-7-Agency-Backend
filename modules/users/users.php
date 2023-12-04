@@ -7,3 +7,7 @@ function insertUserQuery() {
 function loginUserQuery() {
     return "SELECT * FROM users WHERE email = ? LIMIT 1";
 }
+
+function isEmailExistsQuery() {
+    return "SELECT email FROM users WHERE email = ?";
+}

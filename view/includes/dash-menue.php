@@ -1,4 +1,11 @@
-   <!-- ========== Left Sidebar Start ========== -->
+   
+ <?php
+
+if (isset($_SESSION['user_type'])) {
+    $user_type = $_SESSION['user_type'];
+?>
+   
+<!-- ========== Left Sidebar Start ========== -->
    <div class="leftside-menu">
 
 <!-- Brand Logo Light -->
@@ -35,6 +42,7 @@
             </a>
         </li>
 
+        <?php if ($user_type === 1) { ?>
         <li class="side-nav-item">
             <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
                 <i class="ri-pages-line"></i>
@@ -53,7 +61,7 @@
                 </ul>
             </div>
         </li>
-
+       
         <li class="side-nav-item">
             <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth" class="side-nav-link">
                 <i class="ri-group-2-line"></i>
@@ -91,11 +99,33 @@
                 </ul>
             </div>
         </li>
-
+ <?php } ?>
+ <?php if ($user_type === 3) { ?>
+        <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" class="side-nav-link">
+                <i class="ri-pencil-ruler-2-line"></i>
+                <span> Services </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarCharts">
+                <ul class="side-nav-second-level">
+                    <li>
+                        <a href="#">Add a service</a>
+                    </li>
+                    <li>
+                        <a href="#">Services List</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        <?php } ?>
     </ul>
     <!--- End Sidemenu -->
 
     <div class="clearfix"></div>
 </div>
 </div>
+<?php } ?>
+
 <!-- ========== Left Sidebar End ========== -->

@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -50,9 +54,9 @@
                                     </h4>
                                 </div>
                                 <div class="tpcontact__form">
-                                    <form id="registrationForm" action="../controller/register.inc.php" method="post">
-                                        <input type="text" id="name" name="name" placeholder="Your Name">
-                                        <span id="nameError" class="error" style="color: red;"></span>
+                                <form id="registrationForm" action="../controller/register.inc.php" method="post">
+                                <input type="text" id="name" name="name" placeholder="Your Name">
+                                        <span id="nameError" class="error"></span>
 
                                         <input type="email" id="email" name="email" placeholder="Email Address">
                                         <span id="emailError" class="error"></span>
@@ -67,6 +71,7 @@
                                         <button class="tp-btn" type="submit" name="submit">Register</button>
                                     </form>
 
+
                                 </div>
                             </div>
                         </div>
@@ -77,62 +82,66 @@
 
     </main>
     <script>
-        document.getElementById("registrationForm").addEventListener("submit", function(event) {
-            let name = document.getElementById("name").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let password = document.getElementById("password").value;
-            let confirmPassword = document.getElementById("confirmPassword").value;
+    // JavaScript Validation (Client-side)
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value;
 
-            let nameError = document.getElementById("nameError");
-            let emailError = document.getElementById("emailError");
-            let passwordError = document.getElementById("passwordError");
-            let confirmPasswordError = document.getElementById("confirmPasswordError");
+        let nameError = document.getElementById("nameError");
+        let emailError = document.getElementById("emailError");
+        let passwordError = document.getElementById("passwordError");
+        let confirmPasswordError = document.getElementById("confirmPasswordError");
 
-            let isValid = true;
+        let isValid = true;
 
-            // Name validation
-            if (name === "") {
-                nameError.textContent = "Please enter your name";
-                isValid = false;
-            } else {
-                nameError.textContent = "";
-            }
+        // Clear previous error messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        passwordError.textContent = "";
+        confirmPasswordError.textContent = "";
 
-            // Email validation
-            if (email === "") {
-                emailError.textContent = "Please enter your email address";
-                isValid = false;
-            } else {
-                emailError.textContent = "";
-            }
+        // Client-side validation
+        if (name === "") {
+            nameError.textContent = "Please enter your name";
+            isValid = false;
+        }
 
-            // Password validation
-            if (password === "") {
-                passwordError.textContent = "Please enter a password";
-                isValid = false;
-            } else if (password.length < 8) {
-                passwordError.textContent = "Password must be at least 8 characters";
-                isValid = false;
-            } else {
-                passwordError.textContent = "";
-            }
+        if (email === "") {
+            emailError.textContent = "Please enter your email address";
+            isValid = false;
+        } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+            emailError.textContent = "Invalid email format";
+            isValid = false;
+        }
 
-            // Confirm Password validation
-            if (confirmPassword === "") {
-                confirmPasswordError.textContent = "Please confirm your password";
-                isValid = false;
-            } else if (password !== confirmPassword) {
-                confirmPasswordError.textContent = "Passwords do not match";
-                isValid = false;
-            } else {
-                confirmPasswordError.textContent = "";
-            }
+        if (password === "") {
+            passwordError.textContent = "Please enter a password";
+            isValid = false;
+        } else if (password.length < 8) {
+            passwordError.textContent = "Password must be at least 8 characters";
+            isValid = false;
+        }
 
-            if (!isValid) {
-                event.preventDefault(); // Prevent the form from submitting if validation fails
-            }
-        });
-    </script>
+        if (confirmPassword === "") {
+            confirmPasswordError.textContent = "Please confirm your password";
+            isValid = false;
+        } else if (password !== confirmPassword) {
+            confirmPasswordError.textContent = "Passwords do not match";
+            isValid = false;
+        }
+
+        if (!isValid) {
+            event.preventDefault(); // Prevent the form from submitting if validation fails
+        }
+    });
+// Display errors retrieved from session in respective fields
+    document.getElementById("nameError").innerHTML = "<?php echo isset($_SESSION['errors']['name']) ? $_SESSION['errors']['name'] : ''; ?>";
+    document.getElementById("emailError").innerHTML = "<?php echo isset($_SESSION['errors']['email']) ? $_SESSION['errors']['email'] : ''; ?>";
+    document.getElementById("passwordError").innerHTML = "<?php echo isset($_SESSION['errors']['password']) ? $_SESSION['errors']['password'] : ''; ?>";
+    document.getElementById("confirmPasswordError").innerHTML = "<?php echo isset($_SESSION['errors']['password_confirm']) ? $_SESSION['errors']['password_confirm'] : ''; ?>";
+</script>
     <?php include 'includes/footer.php' ?>
 
     <!-- JS here -->
