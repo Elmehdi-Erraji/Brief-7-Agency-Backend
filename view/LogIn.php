@@ -56,20 +56,20 @@
                                 </h4>
                             </div>
                             <div class="tpcontact__form">
-                                <form id="loginForm">
+                                <form id="loginForm" action="../controller/login.inc.php" method="post">
                                     <div class="input-group">
-                                        <input type="email" id="loginEmail" placeholder="Email Address">
+                                        <input type="email" name="email" id="loginEmail" placeholder="Email Address">
                                         <span id="loginEmailError" class="error"></span>
                                     </div>
                                     <div class="input-group">
-                                        <input type="password" id="loginPassword" placeholder="Password">
+                                        <input type="password" name="password" id="loginPassword" placeholder="Password">
                                         <span id="loginPasswordError" class="error"></span>
                                     </div>
                                     <div class="forgot-password-link">
                                         <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
                                     </div>
                                     <br>
-                                    <button class="tp-btn" type="submit" onclick="login()">Login</button>
+                                    <button class="tp-btn" type="submit" name="submit" >Login</button>
                                 </form>
                                 <br>
                                 <p id="txt">If you don't have an account, <a href="register.php">sign up here</a>.</p>
