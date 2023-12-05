@@ -1,20 +1,15 @@
 <?php
-header("Cache-Control: no-cache, no-store, must-revalidate");
-header("Pragma: no-cache");
-header("Expires: 0");
-include '../config/db_con.php';
-require_once __DIR__ . '/../modules/users/users.php';
-
-
 session_start(); // Start session
 
 if (isset($_POST['submit'])) {
+    include '../config/db_con.php';
+    require_once __DIR__ . '/../modules/users/users.php';
 
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     // Fetch login query from user_functions.php
-    $loginUserQuery = loginUserQuery();
+    $loginUserQuery = loginUserQuery($conn, $email, $password);
 
     $stmt = mysqli_prepare($conn, $loginUserQuery);
     if ($stmt) {
@@ -33,22 +28,26 @@ if (isset($_POST['submit'])) {
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['user_type'] = $user_type; // Set user type in session
-                
 
-                 // Redirect all users to a single dashboard
-                 header("Location: ../view/dashboard.php");
-                 exit();
-             
+                // Redirect all users to a single dashboard
+                header("Location: ../view/dashboard.php");
+                exit();
             } else {
                 // Password is incorrect
-                echo "Invalid password";
+                $_SESSION['error'] = "Invalid password";
+                header("Location: ../view/LogIn.php");
+                exit();
             }
         } else {
             // User not found
-            echo "User not found";
+            $_SESSION['error'] = "User not found";
+            header("Location: ../view/LogIn.php");
+            exit();
         }
     } else {
-        echo "Error: " . mysqli_error($conn);
+        $_SESSION['error'] = "Error: " . mysqli_error($conn);
+        header("Location: ../view/LogIn.php");
+        exit();
     }
 
     mysqli_stmt_close($stmt);
@@ -57,3 +56,4 @@ if (isset($_POST['submit'])) {
     header("Location: ../view/LogIn.php");
     exit();
 }
+

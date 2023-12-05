@@ -1,3 +1,6 @@
+<?php
+session_start(); // Start session
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -57,19 +60,22 @@
                             </div>
                             <div class="tpcontact__form">
                                 <form id="loginForm" action="../controller/login.inc.php" method="post">
-                                    <div class="input-group">
+                                <div class="input-group">
                                         <input type="email" name="email" id="loginEmail" placeholder="Email Address">
                                         <span id="loginEmailError" class="error"></span>
                                     </div>
+
                                     <div class="input-group">
                                         <input type="password" name="password" id="loginPassword" placeholder="Password">
                                         <span id="loginPasswordError" class="error"></span>
                                     </div>
+
                                     <div class="forgot-password-link">
                                         <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
                                     </div>
-                                    <br>
-                                    <button class="tp-btn" type="submit" name="submit" >Login</button>
+
+                                    <br><br>
+                                    <button class="tp-btn" type="submit" name="submit">Login</button>
                                 </form>
                                 <br>
                                 <p id="txt">If you don't have an account, <a href="register.php">sign up here</a>.</p>
@@ -115,7 +121,40 @@
         margin: 0 5px; /* Adjust margin as needed */
     }
 </style>
+<script>
+    // JavaScript Validation (Client-side)
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        let email = document.getElementById("loginEmail").value.trim();
+        let password = document.getElementById("loginPassword").value;
 
+        let emailError = document.getElementById("loginEmailError");
+        let passwordError = document.getElementById("loginPasswordError");
+
+        let isValid = true;
+
+        // Clear previous error messages
+        emailError.textContent = "";
+        passwordError.textContent = "";
+
+        // Client-side validation
+        if (email === "") {
+            emailError.textContent = "Please enter your email address";
+            isValid = false;
+        } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+            emailError.textContent = "Invalid email format";
+            isValid = false;
+        }
+
+        if (password === "") {
+            passwordError.textContent = "Please enter your password";
+            isValid = false;
+        }
+
+        if (!isValid) {
+            event.preventDefault(); // Prevent the form from submitting if validation fails
+        }
+    });
+</script>
 
 
 <?php include 'includes/footer.php' ?>

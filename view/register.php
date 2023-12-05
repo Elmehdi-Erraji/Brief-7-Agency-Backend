@@ -142,6 +142,12 @@ session_start();
     document.getElementById("passwordError").innerHTML = "<?php echo isset($_SESSION['errors']['password']) ? $_SESSION['errors']['password'] : ''; ?>";
     document.getElementById("confirmPasswordError").innerHTML = "<?php echo isset($_SESSION['errors']['password_confirm']) ? $_SESSION['errors']['password_confirm'] : ''; ?>";
 </script>
+<?php
+        unset($_SESSION['errors']['name']);
+        unset($_SESSION['errors']['email']);
+        unset($_SESSION['errors']['password']);
+        unset($_SESSION['errors']['password_confirm']);
+        ?>
     <?php include 'includes/footer.php' ?>
 
     <!-- JS here -->
