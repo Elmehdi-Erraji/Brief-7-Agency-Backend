@@ -14,3 +14,19 @@ function loginUserQuery() {
 function isEmailExistsQuery() {
     return "SELECT email FROM users WHERE email = ?";
 }
+
+
+function deleteUser($conn, $userId)
+{
+    $sql = "DELETE FROM `users` WHERE `id` = ?";
+
+    $stmt = mysqli_stmt_init($conn);
+    if (mysqli_stmt_prepare($stmt, $sql)) {
+        mysqli_stmt_bind_param($stmt, "i", $userId);
+        $result = mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        return $result;
+    } else {
+        return false;
+    }
+}

@@ -2,69 +2,75 @@
 header("Cache-Control: no-cache, no-store, must-revalidate");
 header("Pragma: no-cache");
 header("Expires: 0");
-session_start(); 
+session_start();
+include '../config/db_con.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../view/LogIn.php");
     exit();
 }
 
+// database_functions.php
+include '../controller/userList.php';
+$usersData = getUsersData($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
-        <title>Dashboard </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="dashboard " name="description" />
-        <meta content="Techzaa" name="author" />
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="dashboard " name="description" />
+    <meta content="Techzaa" name="author" />
 
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/assets/images/favicon.ico">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/assets/images/favicon.ico">
 
-        <!-- Daterangepicker css -->
-        <link rel="stylesheet" href="../assets/assets/vendor/daterangepicker/daterangepicker.css">
+    <!-- Daterangepicker css -->
+    <link rel="stylesheet" href="../assets/assets/vendor/daterangepicker/daterangepicker.css">
 
-        <!-- Vector Map css -->
-        <link rel="stylesheet" href="../assets/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
+    <!-- Vector Map css -->
+    <link rel="stylesheet" href="../assets/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
 
-        <!-- Theme Config Js -->
-        <script src="../assets/assets/js/config.js"></script>
+    <!-- Theme Config Js -->
+    <script src="../assets/assets/js/config.js"></script>
 
-        <!-- App css -->
-        <link href="../assets/assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <!-- App css -->
+    <link href="../assets/assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
-        <!-- Icons css -->
-        <link href="../assets/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    </head>
+    <!-- Icons css -->
+    <link href="../assets/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
-    <body>
-        <!-- Begin page -->
-        <div class="wrapper">
+</head>
 
-             <!-- ========== Topbar Start ========== -->
+<body>
+    <!-- Begin page -->
+    <div class="wrapper">
 
-                <?php include 'includes/dash-header.php' ?>
+        <!-- ========== Topbar Start ========== -->
 
-            <!-- ========== Topbar Start ========== -->
+        <?php include 'includes/dash-header.php' ?>
 
-
-            <!-- ========== Left Sidebar Start ========== -->
-
-                <?php include 'includes/dash-menue.php' ?>
-
-            <!-- ========== Left Sidebar End ========== -->
+        <!-- ========== Topbar Start ========== -->
 
 
-<style>
-    .error{
-        color: red;
-        font-size: 15;
-        font-weight: 700;
-    }
-</style>
-   <!-- ============================================================== -->
+        <!-- ========== Left Sidebar Start ========== -->
+
+        <?php include 'includes/dash-menue.php' ?>
+
+        <!-- ========== Left Sidebar End ========== -->
+
+
+        <style>
+            .error {
+                color: red;
+                font-size: 15;
+                font-weight: 700;
+            }
+        </style>
+
+        <!-- ============================================================== -->
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
 
@@ -80,12 +86,12 @@ if (!isset($_SESSION['user_id'])) {
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="header-title">Add a new user</h4>
-                                    
+
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                        <form action="../controller/userAdd.php" method="POST" id="addUserForm">
+                                            <form action="../controller/userAdd.php" method="POST" id="addUserForm">
                                                 <!-- User Name -->
                                                 <div class="mb-3">
                                                     <label for="name" class="form-label">User Name</label>
@@ -148,133 +154,134 @@ if (!isset($_SESSION['user_id'])) {
 
                                                 <button type="submit" id="submitButton" class="btn btn-primary" name="submit">Submit</button>
                                             </form>
-                    
-                                            </div> 
+
                                         </div>
-                                    
-                                    </div> 
-                                </div> 
+                                    </div>
+
+                                </div>
                             </div>
-                        </div><!-- end row -->
-
-                    
-
-                    </div> <!-- container -->
-
-                </div> <!-- content -->
-
-            
-
-            </div>
-            
-            <script>
-                document.getElementById("addUserForm").addEventListener("submit", function(event) {
-                    let name = document.getElementById("name").value.trim();
-                    let email = document.getElementById("email").value.trim();
-                    let role = document.getElementById("user_role").value.trim();
-                    let password = document.getElementById("password").value;
-                    let confirmPassword = document.getElementById("confirmPassword").value;
-
-                    let nameError = document.getElementById("nameError");
-                    let emailError = document.getElementById("emailError");
-                    let userRoleError = document.getElementById("userRoleError");
-                    let passwordError = document.getElementById("passwordError");
-                    let confirmPasswordError = document.getElementById("confirmPasswordError");
-
-                    let isValid = true;
-
-                    // Clear previous error messages
-                    nameError.textContent = "";
-                    emailError.textContent = "";
-                    userRoleError.textContent = "";
-                    passwordError.textContent = "";
-                    confirmPasswordError.textContent = "";
-
-                    // Client-side validation
-                    if (name === "") {
-                        nameError.textContent = "Please enter your name";
-                        isValid = false;
-                    }
-
-                    if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
-                        emailError.textContent = "Invalid email format";
-                        isValid = false;
-                    }
-
-                    if (role === "") {
-                        userRoleError.textContent = "Please select a user role";
-                        isValid = false;
-                    }
-
-                    if (password.length < 8) {
-                        passwordError.textContent = "Password must be at least 8 characters long";
-                        isValid = false;
-                    }
-
-                    if (confirmPassword !== password) {
-                        confirmPasswordError.textContent = "Passwords do not match";
-                        isValid = false;
-                    }
-
-                    if (!isValid) {
-                        event.preventDefault(); // Prevent the form from submitting if validation fails
-                    }
-                });
-            </script> 
-            <?php 
-            unset($_SESSION['errors']);
-            unset($_SESSION['old_input']);
-            ?>
+                        </div>
+                    </div><!-- end row -->
 
 
+
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+
+
+
+        </div>
+
+        <script>
+            document.getElementById("addUserForm").addEventListener("submit", function(event) {
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let role = document.getElementById("user_role").value.trim();
+                let password = document.getElementById("password").value;
+                let confirmPassword = document.getElementById("confirmPassword").value;
+
+                let nameError = document.getElementById("nameError");
+                let emailError = document.getElementById("emailError");
+                let userRoleError = document.getElementById("userRoleError");
+                let passwordError = document.getElementById("passwordError");
+                let confirmPasswordError = document.getElementById("confirmPasswordError");
+
+                let isValid = true;
+
+                // Clear previous error messages
+                nameError.textContent = "";
+                emailError.textContent = "";
+                userRoleError.textContent = "";
+                passwordError.textContent = "";
+                confirmPasswordError.textContent = "";
+
+                // Client-side validation
+                if (name === "") {
+                    nameError.textContent = "Please enter your name";
+                    isValid = false;
+                }
+
+                if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+                    emailError.textContent = "Invalid email format";
+                    isValid = false;
+                }
+
+                if (role === "") {
+                    userRoleError.textContent = "Please select a user role";
+                    isValid = false;
+                }
+
+                if (password.length < 8) {
+                    passwordError.textContent = "Password must be at least 8 characters long";
+                    isValid = false;
+                }
+
+                if (confirmPassword !== password) {
+                    confirmPasswordError.textContent = "Passwords do not match";
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    event.preventDefault(); // Prevent the form from submitting if validation fails
+                }
+            });
+        </script>
+        <?php
+        unset($_SESSION['errors']);
+        unset($_SESSION['old_input']);
+        ?>
         <!-- ============================================================== -->
         <!-- End Page content -->
         <!-- ============================================================== -->
 
-                <!-- Footer Start -->
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <script>document.write(new Date().getFullYear())</script> ©   Created by<b> Mehdi</b>
-                            </div>
-                        </div>
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> © Created by<b> Mehdi</b>
                     </div>
-                </footer>
-                <!-- end Footer -->
-
+                </div>
             </div>
+        </footer>
+        <!-- end Footer -->
 
-            <!-- ============================================================== -->
-            <!-- End Page content -->
-            <!-- ============================================================== -->
+    </div>
 
-        </div>
-        <!-- END wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
 
-        <!-- Theme Settings -->
-               
-        
-        <!-- Vendor js -->
-        <script src="../assets/assets/js/vendor.min.js"></script>
+    </div>
+    <!-- END wrapper -->
 
-        <!-- Daterangepicker js -->
-        <script src="../assets/assets/vendor/daterangepicker/moment.min.js"></script>
-        <script src="../assets/assets/vendor/daterangepicker/daterangepicker.js"></script>
-        
-        <!-- Apex Charts js -->
-        <script src="../assets/assets/vendor/apexcharts/apexcharts.min.js"></script>
-
-        <!-- Vector Map js -->
-        <script src="../assets/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="../assets/assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
-
-        <!-- Dashboard App js -->
-        <script src="../assets/assets/js/pages/dashboard.js"></script>
+    <!-- Theme Settings -->
 
 
-        <!-- App js -->
-        <script src="../assets/assets/js/app.min.js"></script>
+    <!-- Vendor js -->
+    <script src="../assets/assets/js/vendor.min.js"></script>
 
-    </body>
-</html> 
+    <!-- Daterangepicker js -->
+    <script src="../assets/assets/vendor/daterangepicker/moment.min.js"></script>
+    <script src="../assets/assets/vendor/daterangepicker/daterangepicker.js"></script>
+
+    <!-- Apex Charts js -->
+    <script src="../assets/assets/vendor/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Vector Map js -->
+    <script src="../assets/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../assets/assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+
+    <!-- Dashboard App js -->
+    <script src="../assets/assets/js/pages/dashboard.js"></script>
+
+
+    <!-- App js -->
+    <script src="../assets/assets/js/app.min.js"></script>
+
+</body>
+
+</html>

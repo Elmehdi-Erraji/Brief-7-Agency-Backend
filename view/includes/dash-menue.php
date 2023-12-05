@@ -11,7 +11,7 @@ if (isset($_SESSION['user_type'])) {
 <!-- Brand Logo Light -->
 <a href="#" class="logo logo-light">
     <span class="logo-lg">
-        <img src="../assets/assets/images/logo.png" alt="logo">
+        <img src="../assets/assets/images/logo-sm.png" alt="logo">
     </span>
     <span class="logo-sm">
         <img src="../assets/assets/images/logo-sm.png" alt="small logo">
@@ -21,7 +21,7 @@ if (isset($_SESSION['user_type'])) {
 <!-- Brand Logo Dark -->
 <a href="#" class="logo logo-dark">
     <span class="logo-lg">
-        <img src="../assets/assets/images/logo-dark.png" alt="dark logo">
+        <img src="../assets/assets/images/logo-sm.png" alt="dark logo">
     </span>
     <span class="logo-sm">
         <img src="../assets/assets/images/logo-sm.png" alt="small logo">
@@ -36,7 +36,7 @@ if (isset($_SESSION['user_type'])) {
         <li class="side-nav-title">Main</li>
 
         <li class="side-nav-item">
-            <a href="#" class="side-nav-link">
+            <a href="dashboard.php" class="side-nav-link">
                 <i class="ri-dashboard-3-line"></i>
                 <span> Dashboard </span>
             </a>
@@ -55,7 +55,7 @@ if (isset($_SESSION['user_type'])) {
                         <a href="userAdd.php">Add User</a>
                     </li>
                     <li>
-                        <a href="#">User List</a>
+                        <a href="userList.php">User List</a>
                     </li>
                 </ul>
             </div>
@@ -117,6 +117,21 @@ if (isset($_SESSION['user_type'])) {
         <?php } ?>
 
         <?php if ($user_type === 2) { ?>
+            <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarUsers" aria-expanded="false" aria-controls="sidebarUsers" class="side-nav-link">
+                <i class="ri-group-2-line"></i>
+                <span> Users </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarUsers">
+                <ul class="side-nav-second-level">
+                 
+                    <li>
+                        <a href="userList.php">User List</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
         <li class="side-nav-item">
             <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" class="side-nav-link">
                 <i class="ri-pages-line"></i>

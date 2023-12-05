@@ -8,7 +8,7 @@
                             <!-- Logo light -->
                             <a href="#" class="logo-light">
                                 <span class="logo-lg">
-                                    <img src="../assets/assets/images/logo.png" alt="logo">
+                                    <img src="../assets/assets/images/logo-sm.png" alt="logo">
                                 </span>
                                 <span class="logo-sm">
                                     <img src="../assets/assets/images/logo-sm.png" alt="small logo">
@@ -18,7 +18,7 @@
                             <!-- Logo Dark -->
                             <a href="#" class="logo-dark">
                                 <span class="logo-lg">
-                                    <img src="../assets/assets/images/logo-dark.png" alt="dark logo">
+                                    <img src="../assets/assets/images/logo-sm.png" alt="dark logo">
                                 </span>
                                 <span class="logo-sm">
                                     <img src="../assets/assets/images/logo-sm.png" alt="small logo">
@@ -116,7 +116,7 @@
                                     <i class="ri-account-circle-line fs-18 align-middle me-1"></i>
                                 </span>
                                 <span class="d-lg-block d-none">
-                                    <h5 class="my-0 fw-normal">Thomson <i
+                                    <h5 class="my-0 fw-normal"> <i
                                             class="ri-arrow-down-s-line d-none d-sm-inline-block align-middle"></i></h5>
                                 </span>
                             </a>
