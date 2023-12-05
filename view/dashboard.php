@@ -265,7 +265,7 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 text-center">
-                                <script>document.write(new Date().getFullYear())</script> ©   Created <b>Mehdi</b>
+                                <script>document.write(new Date().getFullYear())</script> ©   Created by<b> Mehdi</b>
                             </div>
                         </div>
                     </div>

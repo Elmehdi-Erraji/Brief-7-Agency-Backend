@@ -114,7 +114,7 @@ session_start();
         } else if (!/^\S+@\S+\.\S+$/.test(email)) {
             emailError.textContent = "Invalid email format";
             isValid = false;
-        }
+        } 
 
         if (password === "") {
             passwordError.textContent = "Please enter a password";

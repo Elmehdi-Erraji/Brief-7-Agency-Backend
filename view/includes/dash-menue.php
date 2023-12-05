@@ -43,13 +43,31 @@ if (isset($_SESSION['user_type'])) {
         </li>
 
         <?php if ($user_type === 1) { ?>
+            <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarUsers" aria-expanded="false" aria-controls="sidebarUsers" class="side-nav-link">
+                <i class="ri-group-2-line"></i>
+                <span> Users </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarUsers">
+                <ul class="side-nav-second-level">
+                    <li>
+                        <a href="userAdd.php">Add User</a>
+                    </li>
+                    <li>
+                        <a href="#">User List</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
         <li class="side-nav-item">
-            <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
+            <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" class="side-nav-link">
                 <i class="ri-pages-line"></i>
                 <span> Projects </span>
                 <span class="menu-arrow"></span>
             </a>
-            <div class="collapse" id="sidebarPages">
+            <div class="collapse" id="sidebarProjects">
                 <ul class="side-nav-second-level">
                     <li>
                         <a href="#">Add a project</a>
@@ -57,71 +75,129 @@ if (isset($_SESSION['user_type'])) {
                     <li>
                         <a href="#">Projects List</a>
                     </li>
-                   
                 </ul>
             </div>
         </li>
        
+      
         <li class="side-nav-item">
-            <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth" class="side-nav-link">
-                <i class="ri-group-2-line"></i>
-                <span> Users </span>
+            <a data-bs-toggle="collapse" href="#sidebarServices" aria-expanded="false" aria-controls="sidebarServices" class="side-nav-link">
+                <i class="ri-pencil-ruler-2-line"></i>
+                <span> Services </span>
                 <span class="menu-arrow"></span>
             </a>
-            <div class="collapse" id="sidebarPagesAuth">
+            <div class="collapse" id="sidebarServices">
                 <ul class="side-nav-second-level">
                     <li>
-                        <a href=#">Add User</a>
+                        <a href="#">Add a service</a>
                     </li>
                     <li>
-                        <a href="#">List</a>
+                        <a href="#">Services List</a>
                     </li>
-                   
                 </ul>
             </div>
         </li>
+        <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarFAQ" aria-expanded="false" aria-controls="sidebarFAQ" class="side-nav-link">
+                <i class="ri-questionnaire-line"></i>
+                <span> FAQ </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarFAQ">
+                <ul class="side-nav-second-level">
+                    <li>
+                        <a href="#">Add FAQ</a>
+                    </li>
+                    <li>
+                        <a href="dash-faq.php">FAQ List</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <?php } ?>
 
+        <?php if ($user_type === 2) { ?>
         <li class="side-nav-item">
-            <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" class="side-nav-link">
-                <i class="ri-pencil-ruler-2-line"></i>
-                <span> Services </span>
+            <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" class="side-nav-link">
+                <i class="ri-pages-line"></i>
+                <span> Projects </span>
                 <span class="menu-arrow"></span>
             </a>
-            <div class="collapse" id="sidebarCharts">
+            <div class="collapse" id="sidebarProjects">
                 <ul class="side-nav-second-level">
                     <li>
-                        <a href="#">Add a service</a>
+                        <a href="#">Projects List</a>
                     </li>
-                    <li>
-                        <a href="#">Services List</a>
-                    </li>
-                    
                 </ul>
             </div>
         </li>
- <?php } ?>
- <?php if ($user_type === 3) { ?>
         <li class="side-nav-item">
-            <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" class="side-nav-link">
+            <a data-bs-toggle="collapse" href="#sidebarServices" aria-expanded="false" aria-controls="sidebarServices" class="side-nav-link">
                 <i class="ri-pencil-ruler-2-line"></i>
                 <span> Services </span>
                 <span class="menu-arrow"></span>
             </a>
-            <div class="collapse" id="sidebarCharts">
+            <div class="collapse" id="sidebarServices">
                 <ul class="side-nav-second-level">
-                    <li>
-                        <a href="#">Add a service</a>
-                    </li>
                     <li>
                         <a href="#">Services List</a>
                     </li>
-                    
+                </ul>
+            </div>
+        </li>
+        <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarFAQ" aria-expanded="false" aria-controls="sidebarFAQ" class="side-nav-link">
+                <i class="ri-questionnaire-line"></i>
+                <span> FAQ </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarFAQ">
+                <ul class="side-nav-second-level">
+                    <li>
+                        <a href="dash-faq.php">FAQ List</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <?php } ?>
+
+        <?php if ($user_type === 3) { ?>
+       
+        <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarServices" aria-expanded="false" aria-controls="sidebarServices" class="side-nav-link">
+                <i class="ri-pencil-ruler-2-line"></i>
+                <span> Services </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarServices">
+                <ul class="side-nav-second-level">
+                    <li>
+                        <a href="#">Services List</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarFAQ" aria-expanded="false" aria-controls="sidebarFAQ" class="side-nav-link">
+                <i class="ri-questionnaire-line"></i>
+                <span> FAQ </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarFAQ">
+                <ul class="side-nav-second-level">
+                    <li>
+                        <a href="dash-faq.php">FAQ List</a>
+                    </li>
                 </ul>
             </div>
         </li>
         <?php } ?>
     </ul>
     <!--- End Sidemenu -->
+</div>
+
+</div>
+
 
     <div class="clearfix"></div>
 </div>

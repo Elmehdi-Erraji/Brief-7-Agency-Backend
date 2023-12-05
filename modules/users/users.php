@@ -1,7 +1,10 @@
-<?php
+<?php 
 
 function insertUserQuery() {
     return "INSERT INTO users (firstname, email, password, type) VALUES (?, ?, ?, 3)";
+}
+function addtUserQuery() {
+    return "INSERT INTO users (firstname, email, password, type) VALUES (?, ?, ?, ?)";
 }
 
 function loginUserQuery() {
