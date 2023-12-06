@@ -9,7 +9,26 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+include '../config/db_con.php';
+// Get the count of users
+$getUserCountQuery = "SELECT COUNT(*) AS user_count FROM users";
+$resultUserCount = mysqli_query($conn, $getUserCountQuery);
+$userCount = 0; // Default count
 
+if ($resultUserCount) {
+    $rowUserCount = mysqli_fetch_assoc($resultUserCount);
+    $userCount = $rowUserCount['user_count'];
+}
+
+// Get the count of projects
+$getProjectCountQuery = "SELECT COUNT(*) AS project_count FROM projects";
+$resultProjectCount = mysqli_query($conn, $getProjectCountQuery);
+$projectCount = 0; // Default count
+
+if ($resultProjectCount) {
+    $rowProjectCount = mysqli_fetch_assoc($resultProjectCount);
+    $projectCount = $rowProjectCount['project_count'];
+}
 ?>
 
 
@@ -89,45 +108,7 @@ if (!isset($_SESSION['user_id'])) {
                         <!-- end page title -->
 
                         <div class="row">
-                            <div class="col-xxl-3 col-sm-6">
-                                <div class="card widget-flat text-bg-pink">
-                                    <div class="card-body">
-                                        <div class="float-end">
-                                            <i class="ri-eye-line widget-icon"></i>
-                                        </div>
-                                        <h6 class="text-uppercase mt-0" title="Customers">Daily Visits</h6>
-                                        <h2 class="my-2">8,652</h2>
-                                    
-                                    </div>
-                                </div>
-                            </div> <!-- end col-->
-
-                            <div class="col-xxl-3 col-sm-6">
-                                <div class="card widget-flat text-bg-purple">
-                                    <div class="card-body">
-                                        <div class="float-end">
-                                            <i class="ri-wallet-2-line widget-icon"></i>
-                                        </div>
-                                        <h6 class="text-uppercase mt-0" title="Customers">Revenue</h6>
-                                        <h2 class="my-2">$9,254.62</h2>
-                                       
-                                    </div>
-                                </div>
-                            </div> <!-- end col-->
-
-                            <div class="col-xxl-3 col-sm-6">
-                                <div class="card widget-flat text-bg-info">
-                                    <div class="card-body">
-                                        <div class="float-end">
-                                            <i class="ri-shopping-basket-line widget-icon"></i>
-                                        </div>
-                                        <h6 class="text-uppercase mt-0" title="Customers">Orders</h6>
-                                        <h2 class="my-2">753</h2>
-                                       
-                                    </div>
-                                </div>
-                            </div> <!-- end col-->
-
+                           
                             <div class="col-xxl-3 col-sm-6">
                                 <div class="card widget-flat text-bg-primary">
                                     <div class="card-body">
@@ -135,11 +116,26 @@ if (!isset($_SESSION['user_id'])) {
                                             <i class="ri-group-2-line widget-icon"></i>
                                         </div>
                                         <h6 class="text-uppercase mt-0" title="Customers">Users</h6>
-                                        <h2 class="my-2">63,154</h2>
+                                        <h2 class="my-2"><?php echo $userCount; ?></h2>
                                       
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="col-xxl-3 col-sm-6">
+                                <div class="card widget-flat text-bg-info">
+                                    <div class="card-body">
+                                        <div class="float-end">
+                                            <i class="ri-shopping-basket-line widget-icon"></i>
+                                        </div>
+                                        <h6 class="text-uppercase mt-0" title="Customers">Projects</h6>
+                                        <h2 class="my-2">753</h2>
+                                       
+                                    </div>
+                                </div>
                             </div> <!-- end col-->
+
+                            <!-- end col-->
                         </div>
 
                     
