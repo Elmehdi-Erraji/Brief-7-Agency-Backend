@@ -9,7 +9,10 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,10 +97,7 @@ if (!isset($_SESSION['user_id'])) {
                                         </div>
                                         <h6 class="text-uppercase mt-0" title="Customers">Daily Visits</h6>
                                         <h2 class="my-2">8,652</h2>
-                                        <p class="mb-0">
-                                            <span class="badge bg-white bg-opacity-10 me-1">2.97%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                    
                                     </div>
                                 </div>
                             </div> <!-- end col-->
@@ -110,10 +110,7 @@ if (!isset($_SESSION['user_id'])) {
                                         </div>
                                         <h6 class="text-uppercase mt-0" title="Customers">Revenue</h6>
                                         <h2 class="my-2">$9,254.62</h2>
-                                        <p class="mb-0">
-                                            <span class="badge bg-white bg-opacity-10 me-1">18.25%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                       
                                     </div>
                                 </div>
                             </div> <!-- end col-->
@@ -126,10 +123,7 @@ if (!isset($_SESSION['user_id'])) {
                                         </div>
                                         <h6 class="text-uppercase mt-0" title="Customers">Orders</h6>
                                         <h2 class="my-2">753</h2>
-                                        <p class="mb-0">
-                                            <span class="badge bg-white bg-opacity-25 me-1">-5.75%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                       
                                     </div>
                                 </div>
                             </div> <!-- end col-->
@@ -142,10 +136,7 @@ if (!isset($_SESSION['user_id'])) {
                                         </div>
                                         <h6 class="text-uppercase mt-0" title="Customers">Users</h6>
                                         <h2 class="my-2">63,154</h2>
-                                        <p class="mb-0">
-                                            <span class="badge bg-white bg-opacity-10 me-1">8.21%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                      
                                     </div>
                                 </div>
                             </div> <!-- end col-->
@@ -163,90 +154,39 @@ if (!isset($_SESSION['user_id'])) {
                                     <div class="card-body p-0">
                                         <div class="p-3">
                                             <div class="card-widgets">
-                                                <a href="javascript:;" data-bs-toggle="reload"><i class="ri-refresh-line"></i></a>
                                                 <a data-bs-toggle="collapse" href="#yearly-sales-collapse" role="button" aria-expanded="false" aria-controls="yearly-sales-collapse"><i class="ri-subtract-line"></i></a>
                                                 <a href="#" data-bs-toggle="remove"><i class="ri-close-line"></i></a>
+                                            </div>   
+
+                                            <div class="app-search d-none d-lg-block">
+                                            <form style="width: 40%;" id="searchForm">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control" placeholder="Search..." id="searchInput">
+                                                <span class="ri-search-line search-icon text-muted"></span>
                                             </div>
-                                            <h5 class="header-title mb-0">Projects</h5>
+                                        </form>
                                         </div>
+                                        </div>
+                                        <div>
     
                                         <div id="yearly-sales-collapse" class="collapse show">
     
-                                            <div class="table-responsive">
-                                                <table class="table table-nowrap table-hover mb-0">
-                                                    <thead>
+                                        <div class="card-body">
+                                                <table class="table table-striped table-bordered table-hover" id="userTable">
+                                                    <thead class="table-dark">
                                                         <tr>
-                                                            <th>#</th>
-                                                            <th>Project Name</th>
-                                                            <th>Start Date</th>
-                                                            <th>Due Date</th>
-                                                            <th>Status</th>
-                                                            <th>Assign</th>
+                                                            <th scope="col">Id</th>
+                                                            <th scope="col">Username</th>
+                                                            <th scope="col">Email</th>
+                                                            <th scope="col">Role</th>
+                                                            <th scope="col">Actions</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td>  Admin v1</td>
-                                                            <td>01/01/2015</td>
-                                                            <td>26/04/2015</td>
-                                                            <td><span class="badge bg-info-subtle text-info">Released</span></td>
-                                                            <td>Techzaa Studio</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2</td>
-                                                            <td>  Frontend v1</td>
-                                                            <td>01/01/2015</td>
-                                                            <td>26/04/2015</td>
-                                                            <td><span class="badge bg-info-subtle text-info">Released</span></td>
-                                                            <td>Techzaa Studio</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3</td>
-                                                            <td>  Admin v1.1</td>
-                                                            <td>01/05/2015</td>
-                                                            <td>10/05/2015</td>
-                                                            <td><span class="badge bg-pink-subtle text-pink">Pending</span></td>
-                                                            <td>Techzaa Studio</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>4</td>
-                                                            <td>  Frontend v1.1</td>
-                                                            <td>01/01/2015</td>
-                                                            <td>31/05/2015</td>
-                                                            <td><span class="badge bg-purple-subtle text-purple">Work in Progress</span></td>
-                                                            <td>Techzaa Studio</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>5</td>
-                                                            <td>  Admin v1.3</td>
-                                                            <td>01/01/2015</td>
-                                                            <td>31/05/2015</td>
-                                                            <td><span class="badge bg-warning-subtle text-warning">Coming soon</span></td>
-                                                            <td>Techzaa Studio</td>
-                                                        </tr>
-    
-                                                        <tr>
-                                                            <td>6</td>
-                                                            <td>  Admin v1.3</td>
-                                                            <td>01/01/2015</td>
-                                                            <td>31/05/2015</td>
-                                                            <td><span class="badge bg-primary-subtle text-primary">Coming soon</span></td>
-                                                            <td>Techzaa Studio</td>
-                                                        </tr>
-    
-                                                        <tr>
-                                                            <td>7</td>
-                                                            <td>  Admin v1.3</td>
-                                                            <td>01/01/2015</td>
-                                                            <td>31/05/2015</td>
-                                                            <td><span class="badge bg-danger-subtle text-danger">Cool</span></td>
-                                                            <td>Techzaa Studio</td>
-                                                        </tr>
-    
+                                                    <tbody id="userData">
+                                                        <!-- Table body content will be dynamically populated here -->
                                                     </tbody>
                                                 </table>
-                                            </div>        
+                                        </div>       
                                         </div>
                                     </div>                           
                                 </div> <!-- end card-->
@@ -259,6 +199,103 @@ if (!isset($_SESSION['user_id'])) {
 
                 </div>
                 <!-- content -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                    // Fetch data and populate table
+                    fetchData();
+
+                    // Add event listener for the search input
+                    document.getElementById('searchInput').addEventListener('input', async function (event) {
+                        const searchTerm = event.target.value.toLowerCase();
+                        await filterTable(searchTerm);
+                    });
+                });
+
+                async function filterTable(searchTerm) {
+                    const tableRows = document.querySelectorAll('#userData tr');
+
+                    for (const row of tableRows) {
+                        const username = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+                        const email = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+                        const role = row.querySelector('td:nth-child(4)').textContent.toLowerCase();
+
+                        if (
+                            username.includes(searchTerm) ||
+                            email.includes(searchTerm) ||
+                            role.includes(searchTerm)
+                        ) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    }
+                }
+
+                </script>
+                <script>
+                    function fetchData() {
+                        var xhr = new XMLHttpRequest();
+
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState === XMLHttpRequest.DONE) {
+                                if (xhr.status === 200) {
+                                    var data = JSON.parse(xhr.responseText);
+                                    populateTable(data); // Populate table with received data
+                                } else {
+                                    console.error('Error fetching data: ' + xhr.status);
+                                }
+                            }
+                        };
+
+                        xhr.open('GET', '../controller/fetch_data.php?action=fetchData', true);
+                        xhr.send();
+                    }
+                    const roleNames = {
+                        1: 'Admin',
+                        2: 'Manager',
+                        3: 'Client'
+                        // Add more roles as needed
+                    };
+
+                    function populateTable(data) {
+                        var tableBody = document.getElementById('userData');
+                        tableBody.innerHTML = '';
+
+                        data.forEach(function (row) {
+                            var newRow = document.createElement('tr');
+
+                            newRow.innerHTML = `
+                                <td>${row.id}</td>
+                                <td>${row.firstname}</td>
+                                <td>${row.email}</td>
+                                <td>${roleNames[row.type]}</td>
+                                <td class="text-center">
+                                    <a href="userUpdate.php?id=${row.id}" class="btn btn-primary btn-sm me-2">
+                                        <i class="fa-solid fa-pen-to-square"></i> Update
+                                    </a>
+                                    <?php if ($user_type === 1) { ?>
+                                        <!-- Delete user link -->
+                                             <a href="../controller/userDelete.php?id=${row.id}" class="btn btn-danger btn-sm">
+                                                 <i class="fa-solid fa-trash"></i> Delete                   
+                                              </a>                                                             
+                                    <?php } ?>  
+
+                                    
+                                    <!-- Delete button here -->
+                                </td>
+                            `;
+
+                            tableBody.appendChild(newRow);
+                        });
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        fetchData();
+                    });
+                </script>
+
+
+
 
                 <!-- Footer Start -->
                 <footer class="footer">
@@ -291,13 +328,7 @@ if (!isset($_SESSION['user_id'])) {
         <script src="../assets/assets/vendor/daterangepicker/moment.min.js"></script>
         <script src="../assets/assets/vendor/daterangepicker/daterangepicker.js"></script>
         
-        <!-- Apex Charts js -->
-        <script src="../assets/assets/vendor/apexcharts/apexcharts.min.js"></script>
-
-        <!-- Vector Map js -->
-        <script src="../assets/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="../assets/assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
-
+    
         <!-- Dashboard App js -->
         <script src="../assets/assets/js/pages/dashboard.js"></script>
 

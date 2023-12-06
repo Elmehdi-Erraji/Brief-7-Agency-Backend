@@ -99,9 +99,9 @@ if (!isset($_SESSION['user_id'])) {
                                                 <div class="mb-3">
                                                     <label for="user_role" class="form-label">User Role</label>
                                                     <select class="form-select" id="user_role" name="user_role">
-                                                        <option value="Admin">Admin</option>
-                                                        <option value="Manager">Manager</option>
-                                                        <option value="Client">Client</option>
+                                                        <option value="1">Admin</option>
+                                                        <option value="2">Manager</option>
+                                                        <option value="3">Client</option>
                                                         <!-- Add more options if needed -->
                                                     </select>
                                                     <span class="error" id="userRoleError">

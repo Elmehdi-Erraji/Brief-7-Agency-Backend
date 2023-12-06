@@ -10,13 +10,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     // Call the function to delete the user
     $deleted = deleteUser($conn, $userId);
 
-    if ($deleted) {
-        header("Location: ../view/userList.php"); // Redirect on success
+    if (!$deleted) {
+        header("Location: ../view/userList.php");// Redirect on success
         exit();
-    } else {
-        header("Location: ../view/userList.php"); // Redirect on failure
-        exit();
-    }
+    } 
 } else {
     header("Location: ../view/userList.php"); // Redirect for missing ID
     exit();

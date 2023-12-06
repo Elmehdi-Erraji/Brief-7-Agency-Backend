@@ -3,16 +3,45 @@ header("Cache-Control: no-cache, no-store, must-revalidate");
 header("Pragma: no-cache");
 header("Expires: 0");
 session_start();
-include '../config/db_con.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../view/LogIn.php");
     exit();
 }
 
-// database_functions.php
-include '../controller/userList.php';
-$usersData = getUsersData($conn);
+include '../config/db_con.php';
+require_once __DIR__ . '/../modules/users/users.php';
+
+$errors = []; // Array to store validation errors
+$userData = []; // Initialize an empty array to store user data
+
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
+    $user_id = $_GET['id']; // Get the user ID from the URL parameter or your source
+
+    // Fetch the user's details from the database using SQL query
+    $userDetailsQuery = "SELECT `firstname`, `email`, `password` ,`type` FROM `users` WHERE `id` = ?";
+    $stmt = mysqli_prepare($conn, $userDetailsQuery);
+    mysqli_stmt_bind_param($stmt, "i", $user_id);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    // Fetch the user's details as an associative array
+    if ($result && mysqli_num_rows($result) > 0) {
+        $userData = mysqli_fetch_assoc($result);
+    } else {
+        // Redirect or handle the case when user data is not found
+        header("Location: ../error-page.php");
+        exit();
+    }
+
+    // Close the statement and database connection
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+} else {
+    // Redirect or handle cases where 'id' is not provided in the URL parameter
+    header("Location: ../error-page.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,24 +114,26 @@ $usersData = getUsersData($conn);
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="header-title">Add a new user</h4>
+                                    <h4 class="header-title">Update user</h4>
 
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <form action="../controller/userAdd.php" method="POST" id="addUserForm">
+                                            <form action="../controller/userUpdate.php" method="POST" id="addUserForm">
+                                            <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+
                                                 <!-- User Name -->
                                                 <div class="mb-3">
                                                     <label for="name" class="form-label">User Name</label>
-                                                    <input type="text" id="name" class="form-control" name="name">
+                                                    <input type="text" id="name" class="form-control" name="name" value="<?php echo isset($userData['firstname']) ? htmlspecialchars($userData['firstname']) : ''; ?>">
                                                     <span id="nameError" class="error">
                                                         <?php echo isset($_SESSION['errors']['name']) ? $_SESSION['errors']['name'] : ''; ?>
                                                     </span>
                                                 </div>
 
-                                                <!-- User Role -->
-                                                <div class="mb-3">
+                                                 <!-- User Role -->
+                                                 <div class="mb-3">
                                                     <label for="user_role" class="form-label">User Role</label>
                                                     <select class="form-select" id="user_role" name="user_role">
                                                         <option value="Admin">Admin</option>
@@ -114,11 +145,10 @@ $usersData = getUsersData($conn);
                                                         <?php echo isset($_SESSION['errors']['user_role']) ? $_SESSION['errors']['user_role'] : ''; ?>
                                                     </span>
                                                 </div>
-
                                                 <!-- Email -->
                                                 <div class="mb-3">
                                                     <label for="email" class="form-label">Email</label>
-                                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" value="<?php echo isset($userData['email']) ? htmlspecialchars($userData['email']) : ''; ?>">
                                                     <span id="emailError" class="error">
                                                         <?php echo isset($_SESSION['errors']['email']) ? $_SESSION['errors']['email'] : ''; ?>
                                                     </span>
@@ -128,7 +158,7 @@ $usersData = getUsersData($conn);
                                                 <div class="mb-3">
                                                     <label for="password" class="form-label">Password</label>
                                                     <div class="input-group input-group-merge">
-                                                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
+                                                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" >
                                                         <div class="input-group-text" data-password="false">
                                                             <span class="password-eye"></span>
                                                         </div>
@@ -212,11 +242,7 @@ $usersData = getUsersData($conn);
                     isValid = false;
                 }
 
-                if (password.length < 8) {
-                    passwordError.textContent = "Password must be at least 8 characters long";
-                    isValid = false;
-                }
-
+                
                 if (confirmPassword !== password) {
                     confirmPasswordError.textContent = "Passwords do not match";
                     isValid = false;
