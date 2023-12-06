@@ -18,8 +18,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     header("Location: ../view/userList.php"); // Redirect for missing ID
     exit();
 }
-?>
 
 
 
-?>
+

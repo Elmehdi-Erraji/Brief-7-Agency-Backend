@@ -167,7 +167,7 @@ if (!isset($_SESSION['user_id'])) {
                                         </form>
                                         </div>
                                         </div>
-                                        <div>
+                                       
     
                                         <div id="yearly-sales-collapse" class="collapse show">
     

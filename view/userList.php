@@ -83,19 +83,30 @@ if (isset($_SESSION['user_type'])) {
                         <br>
 
 
-                        <div class="col-lg-12">
-                            <div class="col-lg-12">
-                                <div class="col-lg-12">
+                    
                                     <div class="card card-outline card-success">
-                                        <div class="card-header d-flex justify-content-between align-items-center">
+                                        
+                                        <div class="p-3">
+                                            <div class="card-widgets">
+                                                <a data-bs-toggle="collapse" href="#yearly-sales-collapse" role="button" aria-expanded="false" aria-controls="yearly-sales-collapse"><i class="ri-subtract-line"></i></a>
+                                                <a href="#" data-bs-toggle="remove"><i class="ri-close-line"></i></a>
+                                            </div>   
                                             <div>
                                                 <a href="userAdd.php" class="btn btn-dark">Add New User</a>
                                             </div>
-                                            <div>
-                                                <!-- Search bar -->
-                                                <input type="text" class="form-control" placeholder="Search..." style="width: 200px;">
+                                            <br>
+                                            <br>
+
+                                            <div class="app-search d-none d-lg-block">
+                                            <form style="width: 40%;" id="searchForm">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control" placeholder="Search..." id="searchInput">
+                                                <span class="ri-search-line search-icon text-muted"></span>
                                             </div>
+                                        </form>
                                         </div>
+                                        </div>
+                                        <div id="yearly-sales-collapse" class="collapse show">
 
                                         <div class="card-body">
                                             <table class="table table-striped table-bordered table-hover">

@@ -37,7 +37,7 @@ function deleteUser($conn, $userId)
 function fetchUsersData($conn) {
     $userData = array(); // Initialize an empty array to store user data
 
-    // Your SQL query to retrieve user data
+    // Your SQL query to retrieve user data 
     $sql = "SELECT `id`,`firstname`, `email`, `type` FROM `users`";
 
     // Perform the query and fetch data
@@ -52,3 +52,4 @@ function fetchUsersData($conn) {
 
     return $userData; // Return the array containing user data
 }
+

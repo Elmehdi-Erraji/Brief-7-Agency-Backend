@@ -136,9 +136,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
                                                  <div class="mb-3">
                                                     <label for="user_role" class="form-label">User Role</label>
                                                     <select class="form-select" id="user_role" name="user_role">
-                                                        <option value="Admin">Admin</option>
-                                                        <option value="Manager">Manager</option>
-                                                        <option value="Client">Client</option>
+                                                        <option value="1">Admin</option>
+                                                        <option value="2">Manager</option>
+                                                        <option value="3">Client</option>
                                                         <!-- Add more options if needed -->
                                                     </select>
                                                     <span class="error" id="userRoleError">
@@ -151,34 +151,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
                                                     <input type="email" id="email" name="email" class="form-control" placeholder="Email" value="<?php echo isset($userData['email']) ? htmlspecialchars($userData['email']) : ''; ?>">
                                                     <span id="emailError" class="error">
                                                         <?php echo isset($_SESSION['errors']['email']) ? $_SESSION['errors']['email'] : ''; ?>
-                                                    </span>
-                                                </div>
-
-                                                <!-- Password -->
-                                                <div class="mb-3">
-                                                    <label for="password" class="form-label">Password</label>
-                                                    <div class="input-group input-group-merge">
-                                                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" >
-                                                        <div class="input-group-text" data-password="false">
-                                                            <span class="password-eye"></span>
-                                                        </div>
-                                                    </div>
-                                                    <span id="passwordError" class="error">
-                                                        <?php echo isset($_SESSION['errors']['password']) ? $_SESSION['errors']['password'] : ''; ?>
-                                                    </span>
-                                                </div>
-
-                                                <!-- Confirm Password -->
-                                                <div class="mb-3">
-                                                    <label for="confirmPassword" class="form-label">Confirm password</label>
-                                                    <div class="input-group input-group-merge">
-                                                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Enter your password">
-                                                        <div class="input-group-text" data-password="false">
-                                                            <span class="password-eye"></span>
-                                                        </div>
-                                                    </div>
-                                                    <span id="confirmPasswordError" class="error">
-                                                        <?php echo isset($_SESSION['errors']['confirm_password']) ? $_SESSION['errors']['confirm_password'] : ''; ?>
                                                     </span>
                                                 </div>
 
