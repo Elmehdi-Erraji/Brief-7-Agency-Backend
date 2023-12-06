@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Digital Agency - Home</title>
+    <title>Digital Agency - Sign Up</title>
     <meta name="description" content="our agency Website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

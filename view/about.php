@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Digital Agency - Home</title>
+   <title>Digital Agency - About</title>
    <meta name="description" content="our agency Website">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -142,7 +142,7 @@
                      </div>
                      <div class="tp-service-content mb-20">
                         <h4 class="tp-service-sm-title">We'll ensure you always get the best Digital Service</h4>
-                        <a class="tp-btn" href="service.html">See all Services</a>
+                        <a class="tp-btn" href="services.php">See all Services</a>
                      </div>
                   </div>
                </div>
@@ -151,10 +151,10 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".5s">
                         <div class="tp-service-item mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a href="service-details.html">Web <br> Development</a>
+                              <h4 class="tp-service-sm-title"><a href="services.php">Web <br> Development</a>
                               </h4>
                               <div class="tp-service-item__button-link">
-                                 <a href="service-details.html">
+                                 <a href="services.php">
                                     <span>
                                        <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -176,10 +176,10 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".7s">
                         <div class="tp-service-item sv-color-blue-one mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a href="service-details.html">Mobile app <br>
+                              <h4 class="tp-service-sm-title"><a href="services.php">Mobile app <br>
                                     Development</a></h4>
                               <div class="tp-service-item__button-link">
-                                 <a href="service-details.html">
+                                 <a href="services.php">
                                     <span>
                                        <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -201,10 +201,10 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">
                         <div class="tp-service-item sv-color-blue-two mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a href="service-details.html">Any kind Custom <br>
+                              <h4 class="tp-service-sm-title"><a href="services.php">Any kind Custom <br>
                                     Solution</a></h4>
                               <div class="tp-service-item__button-link">
-                                 <a href="service-details.html">
+                                 <a href="services.php">
                                     <span>
                                        <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>

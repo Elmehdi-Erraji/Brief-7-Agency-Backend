@@ -20,7 +20,6 @@
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item text-dark" href="contact.php">Contact us</a>
                   <a class="dropdown-item text-dark" href="services.php">Services</a>
-                  <a class="dropdown-item text-dark" href="Login.php">LogIn</a>
                 </div>
               </li>
              

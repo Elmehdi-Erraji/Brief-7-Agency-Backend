@@ -59,7 +59,8 @@
 
             <ul class="navbar-nav ml-auto" >
               <li class="">
-                <a class=" btn" href="view/">Register</a>
+              <a class=" btn" href="view/LogIn.php">Log In</a>
+                <a class=" btn" href="view/register.php">Register</a>
               </li>
             </ul>
           </div>
@@ -84,10 +85,10 @@
                      </div>
                      <div class="tp-hero__wrapper d-flex align-items-center wow tpfadeUp" data-wow-duration=".7s" data-wow-delay="1s">
                         <div class="tp-hero__button">
-                           <a title="go here" class="tp-btn" href="pages/services.html">Case Studies</a>
+                           <a title="go here" class="tp-btn" href="view/services.php">Case Studies</a>
                         </div>
                         <div class="tp-hero__play-button">
-                           <a title="go here" class="popup-video" href="https://www.youtube.com/watch?v=hiEb1m7CXH4"><i class="fas fa-play"></i></a>
+                           <a title="go here" class="popup-video" href="#"><i class="fas fa-play"></i></a>
                            <span>See Inside</span>
                         </div>
                      </div>
@@ -156,7 +157,7 @@
                            </div>
                            <div class="tp-slider-exp-item__service-link">
                               <div class="tp-link tp-link-green">
-                                 <a title="go here" href="pages/services.html">
+                                 <a title="go here" href="view/services.php">
                                     <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                        <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#202026"></path>
                                     </svg>
@@ -188,7 +189,7 @@
                            </div>
                            <div class="tp-slider-exp-item__service-link">
                               <div class="tp-link">
-                                 <a title="go here" href="pages/about.html" >
+                                 <a title="go here" href="view/about.php" >
                                     <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                        <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#202026"></path>
                                     </svg>
@@ -228,7 +229,7 @@
                      <h3 class="tp-section-title">We are dynamic team of creative design and development</h3>
                      <p>We have almost 12+ years of experience for helping consulting services <br> and business
                         solutions and best protect.</p>
-                     <a title="go here" class="tp-btn" href="pages/about.html">About our Agency</a>
+                     <a title="go here" class="tp-btn" href="view/about.php">About our Agency</a>
                   </div>
                </div>
             </div>
@@ -248,7 +249,7 @@
                      </div>
                      <div class="tp-service-content mb-20">
                         <h4 class="tp-service-sm-title">We'll ensure you always get the best Digital Service</h4>
-                        <a title="go here" class="tp-btn" href="pages/services.html">See all Services</a>
+                        <a title="go here" class="tp-btn" href="view/services.php">See all Services</a>
                      </div>
                   </div>
                </div>
@@ -257,9 +258,9 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".7s">
                         <div class="tp-service-item mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a title="go here" href="pages/services.html">Web <br> Development</a></h4>
+                              <h4 class="tp-service-sm-title"><a title="go here" href="view/services.php">Web <br> Development</a></h4>
                               <div class="tp-service-item__button-link">
-                                 <a title="go here" href="pages/about.html">
+                                 <a title="go here" href="view/about.php">
                                     <span>
                                        <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -281,9 +282,9 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">
                         <div class="tp-service-item sv-color-blue-one mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a title="go here" href="pages/services.html">Mobile app <br> Development</a></h4>
+                              <h4 class="tp-service-sm-title"><a title="go here" href="view/services.php">Mobile app <br> Development</a></h4>
                               <div class="tp-service-item__button-link">
-                                 <a title="go here" href="pages/services.html">
+                                 <a title="go here" href="view/services.php">
                                     <span>
                                        <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -305,9 +306,9 @@
                      <div class="col-12 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay="1s">
                         <div class="tp-service-item sv-color-blue-two mb-20 d-flex justify-content-between">
                            <div class="tp-service-item__content">
-                              <h4 class="tp-service-sm-title"><a title="go here" href="pages/services.html">Any kind Custom <br> Solution</a></h4>
+                              <h4 class="tp-service-sm-title"><a title="go here" href="view/services.php">Any kind Custom <br> Solution</a></h4>
                               <div class="tp-service-item__button-link">
-                                 <a title="go here" href="pages/services.html">
+                                 <a title="go here" href="view/services.php">
                                     <span>
                                        <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -349,7 +350,7 @@
                   <div class="tp-case-thumb p-relative fix mb-20">
                      <img src="assets/img/case/case-1.jpg" alt="" width="#" height="#"> 
                      <div class="case-icon">
-                        <a title="go here"  href="pages/services.html"><i class="fas fa-arrow-alt-up"></i></a>
+                        <a title="go here"  href="view/services.php"><i class="fas fa-arrow-alt-up"></i></a>
                      </div>
                   </div>
                </div>
@@ -357,7 +358,7 @@
                   <div class="tp-case-thumb p-relative fix mb-20">
                      <img src="assets/img/case/case-2.jpg" alt="" width="#" height="#">
                      <div class="case-icon">
-                        <a title="go here"  href="pages/services.html"><i class="fas fa-arrow-alt-up"></i></a>
+                        <a title="go here"  href="view/services.php"><i class="fas fa-arrow-alt-up"></i></a>
                      </div>
                   </div>
                </div>
@@ -365,7 +366,7 @@
                   <div class="tp-case-thumb p-relative fix mb-20">
                      <img src="assets/img/case/case-3.jpg" alt="" width="#" height="#">
                      <div class="case-icon">
-                        <a title="go here"  href="pages/services.html"><i class="fas fa-arrow-alt-up"></i></a>
+                        <a title="go here"  href="view/services.php"><i class="fas fa-arrow-alt-up"></i></a>
                      </div>
                   </div>
                </div>
@@ -373,7 +374,7 @@
                   <div class="tp-case-thumb p-relative fix mb-20">
                      <img src="assets/img/case/case-4.jpg" alt="" width="#" height="#">
                      <div class="case-icon">
-                        <a title="go here"  href="pages/services.html"><i class="fas fa-arrow-alt-up"></i></a>
+                        <a title="go here"  href="view/services.php"><i class="fas fa-arrow-alt-up"></i></a>
                      </div>
                   </div>
                </div>
@@ -381,7 +382,7 @@
             <div class="row">
                <div class="col-xl-12">
                   <div class="tp-case-button text-center mt-40">
-                     <a title="go here" class="tp-btn" href="pages/services.html">all Case studeis</a>
+                     <a title="go here" class="tp-btn" href="view/services.php">all Case studeis</a>
                   </div>
                </div>
             </div>
@@ -402,7 +403,7 @@
                      <div class="tp-service-content mb-20">
                         <h4 class="tp-service-sm-title">We love our client and our clients <br> loved us. see all
                            feedback</h4>
-                        <a title="go here" class="tp-btn" href="pages/about.html">See all Feedback</a>
+                        <a title="go here" class="tp-btn" href="view/about.php">See all Feedback</a>
                      </div>
                   </div>
                </div>

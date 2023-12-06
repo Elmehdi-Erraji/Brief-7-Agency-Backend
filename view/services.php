@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Digital Agency - Home</title>
+   <title>Digital Agency - Services</title>
    <meta name="description" content="our agency Website">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -64,12 +64,12 @@
                           <img src="../assets/img/service/sv-4.png" alt="">
                        </div>
                        <div class="service-item-three__content">
-                          <h4 class="tp-service-sm-title"><a href="service-details.html">Web <br> Development</a></h4>
+                          <h4 class="tp-service-sm-title"><a href="register.php">Web <br> Development</a></h4>
                           <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
-                          <a href="service-details.html">
+                          <a href="register.php">
                              <span>
                                 <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -86,12 +86,12 @@
                           <img src="../assets/img/service/sv-5.png" alt="">
                        </div>
                        <div class="service-item-three__content">
-                          <h4 class="tp-service-sm-title"><a href="service-details.html">Mobile <br> Development</a></h4>
+                          <h4 class="tp-service-sm-title"><a href="register.php">Mobile <br> Development</a></h4>
                           <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
-                          <a href="service-details.html">
+                          <a href="register.php">
                              <span>
                                 <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -108,12 +108,12 @@
                           <img src="../assets/img/service/sv-6.png" alt="">
                        </div>
                        <div class="service-item-three__content">
-                          <h4 class="tp-service-sm-title"><a href="service-details.html">Web Custom <br> Solution</a></h4>
+                          <h4 class="tp-service-sm-title"><a href="register.php">Web Custom <br> Solution</a></h4>
                           <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
-                          <a href="service-details.html">
+                          <a href="register.php">
                              <span>
                                 <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -130,12 +130,12 @@
                           <img src="../assets/img/service/sv-1.png" alt="">
                        </div>
                        <div class="service-item-three__content">
-                          <h4 class="tp-service-sm-title"><a href="service-details.html">User Experience <br> Design</a></h4>
+                          <h4 class="tp-service-sm-title"><a href="register.php">User Experience <br> Design</a></h4>
                           <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
-                          <a href="service-details.html">
+                          <a href="register.php">
                              <span>
                                 <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -152,12 +152,12 @@
                           <img src="../assets/img/service/sv-2.png" alt="">
                        </div>
                        <div class="service-item-three__content">
-                          <h4 class="tp-service-sm-title"><a href="service-details.html">User Interface <br> Design</a></h4>
+                          <h4 class="tp-service-sm-title"><a href="register.php">User Interface <br> Design</a></h4>
                           <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
-                          <a href="service-details.html">
+                          <a href="register.php">
                              <span>
                                 <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -174,12 +174,12 @@
                           <img src="../assets/img/service/sv-3.png" alt="">
                        </div>
                        <div class="service-item-three__content">
-                          <h4 class="tp-service-sm-title"><a href="service-details.html">Ui Kit and 3d <br> Desgin</a></h4>
+                          <h4 class="tp-service-sm-title"><a href="register.php">Ui Kit and 3d <br> Desgin</a></h4>
                           <p>YourInterface have got quite a few already made templates for better project management that you can
                              use now.</p>
                        </div>
                        <div class="service-item-three__button">
-                          <a href="service-details.html">
+                          <a href="register.php">
                              <span>
                                 <svg width="34" height="16" viewbox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M33.7071 8.70711C34.0976 8.31659 34.0976 7.68342 33.7071 7.2929L27.3431 0.928935C26.9526 0.53841 26.3195 0.53841 25.9289 0.928934C25.5384 1.31946 25.5384 1.95262 25.9289 2.34315L31.5858 8L25.9289 13.6569C25.5384 14.0474 25.5384 14.6805 25.9289 15.0711C26.3195 15.4616 26.9526 15.4616 27.3431 15.0711L33.7071 8.70711ZM-8.74228e-08 9L33 9L33 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"></path>
@@ -218,7 +218,7 @@
                        <h3 class="tp-section-title">We are dynamic team of creative design and development</h3>
                        <p>We have almost 12+ years of experience for helping consulting services <br> and business
                           solutions and best protect.</p>
-                       <a class="tp-btn" href="about-us.html">About our Agency</a>
+                       <a class="tp-btn" href="about.php">About our Agency</a>
                     </div>
                  </div>
               </div>
