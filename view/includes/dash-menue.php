@@ -35,14 +35,15 @@ if (isset($_SESSION['user_type'])) {
 
         <li class="side-nav-title">Main</li>
 
-        <li class="side-nav-item">
+       
+
+        <?php if ($user_type === 1) { ?>
+            <li class="side-nav-item">
             <a href="dashboard.php" class="side-nav-link">
                 <i class="ri-dashboard-3-line"></i>
                 <span> Dashboard </span>
             </a>
         </li>
-
-        <?php if ($user_type === 1) { ?>
             <li class="side-nav-item">
             <a data-bs-toggle="collapse" href="#sidebarUsers" aria-expanded="false" aria-controls="sidebarUsers" class="side-nav-link">
                 <i class="ri-group-2-line"></i>
@@ -117,6 +118,12 @@ if (isset($_SESSION['user_type'])) {
         <?php } ?>
 
         <?php if ($user_type === 2) { ?>
+            <li class="side-nav-item">
+            <a href="dashboard.php" class="side-nav-link">
+                <i class="ri-dashboard-3-line"></i>
+                <span> Dashboard </span>
+            </a>
+        </li>
             <li class="side-nav-item">
             <a data-bs-toggle="collapse" href="#sidebarUsers" aria-expanded="false" aria-controls="sidebarUsers" class="side-nav-link">
                 <i class="ri-group-2-line"></i>

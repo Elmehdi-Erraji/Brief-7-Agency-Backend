@@ -29,8 +29,12 @@ if (isset($_POST['submit'])) {
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['user_type'] = $user_type; // Set user type in session
 
-                // Redirect all users to a single dashboard
-                header("Location: ../view/dashboard.php");
+                if($user_type == 3){
+                    header("Location: ../view/dash-faq.php");
+                }else{
+                    header("Location: ../view/dashboard.php");
+                }
+                
                 exit();
             } else {
                 // Password is incorrect

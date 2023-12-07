@@ -133,7 +133,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
                                                 </div>
 
                                                  <!-- User Role -->
-                                                 <div class="mb-3">
+                                                 <?php if ($user_type === 1) { ?>
+                                                    <div class="mb-3">
                                                     <label for="user_role" class="form-label">User Role</label>
                                                     <select class="form-select" id="user_role" name="user_role">
                                                         <option value="1">Admin</option>
@@ -145,6 +146,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
                                                         <?php echo isset($_SESSION['errors']['user_role']) ? $_SESSION['errors']['user_role'] : ''; ?>
                                                     </span>
                                                 </div>
+                                                            <?php } ?>
+                                                
+
+
                                                 <!-- Email -->
                                                 <div class="mb-3">
                                                     <label for="email" class="form-label">Email</label>
