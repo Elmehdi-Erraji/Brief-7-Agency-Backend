@@ -230,9 +230,9 @@ if ($resultProjectCount) {
                 </script>
                 <script>
                     function fetchData() {
-                        var xhr = new XMLHttpRequest();
+                        var xhr = new XMLHttpRequest(); //http request object
 
-                        xhr.onreadystatechange = function () {
+                        xhr.onreadystatechange = function () { //event handler to process server responses.
                             if (xhr.readyState === XMLHttpRequest.DONE) {
                                 if (xhr.status === 200) {
                                     var data = JSON.parse(xhr.responseText);
